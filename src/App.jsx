@@ -1,11 +1,11 @@
-import ImageUpload from "./Components/ImageUpload";
-import ImagePrediction from "./Components/ImagePrediction";
-import ImageCanvas from "./Components/ImageCanvas";
-import TabComponent from "./Components/TabComponent";
-import Visualization from "./Components/Visualization";
+import ImageUpload from "./components/ImageUpload";
+import ImagePrediction from "./components/ImagePrediction";
+import ImageCanvas from "./components/ImageCanvas";
+import TabComponent from "./components/TabComponent";
+import Visualization from "./components/Visualization";
 import { createContext, useState } from "react";
-import Blog from "./Components/blog-components/Blog";
-import { TracingBeam } from "./Components/TracingBeam";
+import Blog from "./components/blog-components/Blog";
+import { TracingBeam } from "./components/TracingBeam";
 
 export const visualizationContext = createContext();
 

@@ -2,7 +2,7 @@ import { createContext, StrictMode, useState } from 'react'
 import { createRoot } from 'react-dom/client'
 import { RetroGrid } from "@/components/ui/retro-grid"
 import { LightRays } from "@/components/ui/light-rays"
-import { TracingBeam } from './Components/ui/tracing-beam'
+import { TracingBeam } from './components/ui/tracing-beam'
 
 import './index.css'
 import App from './App.jsx'
@@ -17,7 +17,7 @@ function Wrapper() {
         <LightRays />
         <RetroGrid opacity={0.1} />
       </div>
-      
+
       <predictionContext.Provider value={{ prediction, setPrediction }}>
         <App />
       </predictionContext.Provider>

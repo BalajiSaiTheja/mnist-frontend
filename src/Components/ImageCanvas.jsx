@@ -1,5 +1,5 @@
 import { useContext, useEffect, useRef, useState } from "react";
-import { Button } from "@/Components/ui/button";
+import { Button } from "@/components/ui/button";
 import { predictionContext } from "@/main";
 import { visualizationContext } from "@/App";
 
@@ -115,7 +115,7 @@ function ImageCanvas() {
                 });
 
                 if (response.ok) {
-                    const imageBlob =  await response.blob();
+                    const imageBlob = await response.blob();
                     const imageObjectURL = URL.createObjectURL(imageBlob);
                     setVisualizationURL(imageObjectURL);
                 } else {
