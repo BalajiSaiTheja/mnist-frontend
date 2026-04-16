@@ -3,6 +3,8 @@ import { Button } from "@/Components/ui/button";
 import { predictionContext } from "@/main";
 import { visualizationContext } from "@/App";
 
+const baseURL = import.meta.env.VITE_BACKEND_URL;
+
 function ImageCanvas() {
     const { setPrediction } = useContext(predictionContext);
     const { setVisualizationURL } = useContext(visualizationContext);
@@ -88,7 +90,7 @@ function ImageCanvas() {
             formdata.append("uploaded_image", blob, 'canvasImage.png');
             ///   console.log([...formdata.entries()])
             try {
-                const response = await fetch("http://127.0.0.1:8000/predict", {
+                const response = await fetch(`${baseURL}/predict`, {
                     method: "POST",
                     body: formdata
                 });
@@ -107,7 +109,7 @@ function ImageCanvas() {
             }
 
             try {
-                const response = await fetch("http://127.0.0.1:8000/visualize", {
+                const response = await fetch(`${baseURL}/visualize`, {
                     method: "POST",
                     body: formdata
                 });

@@ -5,6 +5,7 @@ import { visualizationContext } from "@/App";
 
 import "./components.css";
 
+const baseURL = import.meta.env.VITE_BACKEND_URL;
 function ImageUpload() {
     const [file, setFile] = useState(null);
     const [preview, setPreview] = useState(null);
@@ -48,7 +49,7 @@ function ImageUpload() {
         formdata.append("uploaded_image", file);
         // console.log([...formdata.entries()])
         try {
-            const response = await fetch("http://127.0.0.1:8000/predict", {
+            const response = await fetch(`${baseURL}/predict`, {
                 method: "POST",
                 body: formdata
             });
@@ -66,7 +67,7 @@ function ImageUpload() {
 
 
         try {
-            const response = await fetch("http://127.0.0.1:8000/visualize", {
+            const response = await fetch(`${baseURL}/visualize`, {
                 method: "POST",
                 body: formdata
             });
