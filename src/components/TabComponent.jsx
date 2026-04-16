@@ -3,7 +3,7 @@ import {
     TabsContent,
     TabsList,
     TabsTrigger,
-} from "@/components_/ui/tabs"
+} from "@/components/ui/tabs"
 import { useState } from "react";
 
 

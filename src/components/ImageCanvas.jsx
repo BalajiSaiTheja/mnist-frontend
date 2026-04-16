@@ -1,5 +1,5 @@
 import { useContext, useEffect, useRef, useState } from "react";
-import { Button } from "@/components_/ui/button";
+import { Button } from "@/components/ui/button";
 import { predictionContext } from "@/main";
 import { visualizationContext } from "@/App";
 
