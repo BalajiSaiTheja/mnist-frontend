@@ -1,7 +1,7 @@
 import { createContext, StrictMode, useState } from 'react'
 import { createRoot } from 'react-dom/client'
-import { RetroGrid } from "@/components/ui/retro-grid"
-import { LightRays } from "@/components/ui/light-rays"
+import { RetroGrid } from "@/components_/ui/retro-grid"
+import { LightRays } from "@/components_/ui/light-rays"
 
 import './index.css'
 import App from './App.jsx'
